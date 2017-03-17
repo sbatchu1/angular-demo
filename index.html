@@ -1,0 +1,31 @@
+<html ng-app = "myApp">
+    <head>
+        <script src="scripts/angular.js"></script>
+          <script src="scripts/app.js"></script>
+    </head>
+    <body >
+        <div ng-controller="MainController">
+            <h1>Hello Angular</h1>
+            <p ng-if="time < 12">Good Morning</p>
+            <p ng-if="time > 16">Good Evening</p>
+            <p> The hour of day: <span ng-bind="time"></span></p> 
+            <button ng-click="refresh()">Update Time</button><br>
+
+            <!-- Two way data binding can be achieved using ng-model -->
+            <p>Please Enter Your Name: <input type="text" ng-model="userName"/></p>
+            <p>Check box: <input type="checkbox" ng-model="booleanValue"/></p>
+            <p>Date: <input type="date" ng-model="dateValue"/></p>
+            <p>Radio Button: 
+                <input type="radio" ng-model="radioOption" value="opt1">Option 1</input>
+                <input type="radio" ng-model="radioOption" value="opt2">Option 2</input>
+                <input type="radio" ng-model="radioOption" value="opt3">Option 3</input>
+
+            <div>
+                <p>Your Name is: {{userName}} </p>
+                <p>Check box value: {{booleanValue}}</p>
+                <p>Date input: {{dateValue}}</p>
+                <p>Radio value: {{radioOption}}</p>
+            </div>
+        </div>
+    </body>
+</html>
