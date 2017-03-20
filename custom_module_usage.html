@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/mainApp.js"></script>
+        <script src="scripts/myCustomModule.js"></script>
+    </head>
+    <body ng-app="mainApp">
+        <div ng-controller="helloWorldController as ctrl">
+            <p ng-bind="ctrl.sayHello"></p>
+        </div>
+    </body>
+</html>
